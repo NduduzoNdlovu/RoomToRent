@@ -3,6 +3,8 @@
   position: relative;
   overflow: hidden;
   border-radius: 16px;
+   /* border:3px solid #17402a; */
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.148);
 }
 
 .card-bg-image {
@@ -19,7 +21,7 @@
   background: white;
   padding-bottom:12px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.404);
 }
 
 .price-save {
@@ -46,7 +48,7 @@
 }
 
 .save-icon.saved {
-  color: red;
+  color: rgb(255, 191, 0);
 }
 
 .room{

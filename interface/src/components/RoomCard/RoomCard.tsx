@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonCard, IonCardHeader,IonButton, IonCardContent, IonCardTitle, IonCardSubtitle, IonImg, IonBadge, IonIcon } from '@ionic/react';
-import { heartSharp, locationOutline, homeOutline } from 'ionicons/icons';
+import { heartSharp, locationOutline, bookmarkOutline ,homeOutline, bookmarksOutline } from 'ionicons/icons';
 import './RoomCard.css';
 
 interface RoomCardProps {
@@ -19,7 +19,7 @@ const RoomCard: React.FC<RoomCardProps> = ({ image, title, address, price, rules
       <div className="card-overlay">
           <div className="price-save">
             <span className="price">{price}</span>
-            <IonIcon icon={heartSharp} className={`save-icon ${isSaved ? 'saved' : ''}`} />
+            <IonIcon icon={bookmarkOutline} className={`save-icon ${isSaved ? 'saved' : ''}`} />
           </div>
         {/* <IonCardContent> */}
         <div className="custom-title">

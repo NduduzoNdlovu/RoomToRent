@@ -4,11 +4,11 @@ ion-page, ion-content {
 
 .custom-tabs {
   --background: var(--color-accent); /*rgb(0, 0, 128); */       
-  padding: 5px;
-  margin: 10px;
+  padding: 8px;
+  margin: 8px;
   border-radius: 18px;       
 }
-
+/*2e6b46, 5da87a, b67e7d*/
 .custom-tab-button {
   display: flex;
   flex-direction: column;

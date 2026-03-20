@@ -1,10 +1,13 @@
 import { IonContent,IonIcon, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../../components/ExploreContainer';
 import RoomCard from '../../components/RoomCard/RoomCard';
+import Header from '../../components/header/Header';
 import Room1Image from '../../assets/images/Room1.jpeg';
 import Room2Image from '../../assets/images/Room2.jpeg';
-import { heartSharp, locationOutline,notificationsOutline, homeOutline } from 'ionicons/icons';
+import { heartSharp, locationOutline,notificationsOutline, homeOutline, navigate } from 'ionicons/icons';
 import './Home.css';
+import Pretoria from "../../assets/images/pretoria.png";
+import PMB from "../../assets/images/pietermaritzburg.png";
 
 const rooms = [
   {
@@ -95,14 +98,16 @@ const cities = [
     name: "Johannesburg",
     image: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99"
   },
-  {
-    name: "Pietermaritzburg",
-    image: "https://images.unsplash.com/photo-1601132359864-c974e79890b1"
+   {
+  
+    name: "Pretoria",
+    image: Pretoria
   },
   {
-    name: "Pretoria",
-    image: "https://images.unsplash.com/photo-1614850715776-7f0e0927f2a7"
+    name: "Pietermaritzburg",
+    image: PMB
   }
+
 ];
 const Home: React.FC = () => {
    
@@ -111,17 +116,25 @@ const Home: React.FC = () => {
       <IonContent fullscreen>
         <div className="home-container">
 
-          <div className="greeting-container">
-            <div> Hi,<span></span>Nduduzo Ndlovu</div>
-            <IonIcon icon={notificationsOutline} className="alert"></IonIcon>
-          </div>
+<Header
+  user={{
+    firstName: "Nduduzo",
+    gender: "female",
+    location: "Durban, KZN",
+    newListings: 3,
+    photo: null,
+  }}
+  // onAvatarClick={() => navigate("/profile")}
+/>
 
 
+ <span className="city-title">
+    Find affordable rooms near...
+  </span>
+        
 <div className="city-section">
 
-  <span className="city-title">
-    Find Affordable Rooms In...
-  </span>
+ 
 
   <div className="city-slider">
     {cities.map((city, index) => (
