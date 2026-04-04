@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonCard, IonCardHeader,IonButton, IonCardContent, IonCardTitle, IonCardSubtitle, IonImg, IonBadge, IonIcon } from '@ionic/react';
-import { heartSharp, locationOutline, bookmarkOutline ,homeOutline, bookmarksOutline } from 'ionicons/icons';
+import { heartSharp, checkmarkCircleSharp, locationOutline, bookmark ,homeOutline } from 'ionicons/icons';
 import './RoomCard.css';
 
 interface RoomCardProps {
@@ -10,21 +10,27 @@ interface RoomCardProps {
   price: string;
   rules: string[];
   isSaved?: boolean;
+  
 }
 
 const RoomCard: React.FC<RoomCardProps> = ({ image, title, address, price, rules, isSaved }) => {
   return (
      <IonCard className="room-card">
       <IonImg src={image} alt={title} className="card-bg-image" />
+<div className="verified-badge">
+  <IonIcon icon={checkmarkCircleSharp} />
+  Verified landlord
+</div>
       <div className="card-overlay">
           <div className="price-save">
             <span className="price">{price}</span>
-            <IonIcon icon={bookmarkOutline} className={`save-icon ${isSaved ? 'saved' : ''}`} />
+            <IonIcon icon={bookmark} className={`save-icon ${isSaved ? 'saved' : ''}`} />
           </div>
         {/* <IonCardContent> */}
         <div className="custom-title">
             <div className="room">
-                <IonIcon icon={homeOutline}></IonIcon>   <span>{title}</span>
+                <IonIcon icon={homeOutline}></IonIcon>   
+                <span>{title}</span>
             </div>
             <div className="location">
                 <IonIcon icon ={locationOutline}></IonIcon><span>{address}</span>

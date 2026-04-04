@@ -101,3 +101,25 @@ ion-badge{
     display:grid;
     grid-template-columns: 3fr 1fr;
 }
+
+.verified-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #4da3ff; /* blue text */
+  background: rgba(0, 0, 0, 0.6); /* 🔥 dark transparent */
+
+  border-radius: 8px;
+  backdrop-filter: blur(4px); /* glass effect */
+
+  z-index: 10;
+}

@@ -152,6 +152,10 @@ const Home: React.FC = () => {
   </div>
 
 </div>
+
+<div className="section-divider">Available Rooms</div>
+
+
           {rooms.map((room, index) => (
             <RoomCard
               key={index}

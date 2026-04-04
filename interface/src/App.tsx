@@ -14,6 +14,7 @@ import { searchOutline, homeOutline, personOutline,chatbubbleEllipsesOutline, he
 import Home from './pages/home/Home';
 import Chat from './pages/messages/Chat';
 import Search from './pages/search/Search';
+import FilterDrawer from './pages/search/FilterDrawer';
 import Profile from './pages/profile/Profile';
 import Saved from './pages/saved/Saved';
 /* Core CSS required for Ionic components to work properly */
